@@ -1,0 +1,80 @@
+### Documentación para la Tienda Ecommerce
+
+#### Configuración del archivo `.env` en la carpeta `backend`
+
+1. **`PORT = 8069`**  
+   Este es el puerto en el cual el servidor backend estará corriendo. Por defecto está configurado en el puerto 8069.
+
+2. **`MONGODB_DATABASE =`**  
+   La URL de conexión a la base de datos de MongoDB. Ejemplo:  
+   `mongodb://localhost:27017/nombreDeTuTienda`
+
+3. **`SECRET_KEY =`**  
+   Clave secreta utilizada para la autenticación de los usuarios con tokens (JWT). Asegúrate de que sea una cadena larga y segura.
+
+4. **`EMAIL =`**  
+   El correo electrónico desde donde se enviarán notificaciones y mensajes de la tienda (como confirmaciones de compra y restablecimientos de contraseña).
+
+5. **`PASS =`**  
+   La contraseña del correo electrónico que enviará las notificaciones.
+
+6. **`HOST_EMAIL =`**  
+   La dirección SMTP del servidor del correo. Por ejemplo, para Gmail sería `smtp.gmail.com`.
+
+7. **`PORT_EMAIL =`**  
+   Puerto utilizado por el servidor SMTP para enviar correos electrónicos. Generalmente es `587` (para TLS) o `465` (para SSL).
+
+8. **`URL =`**  
+   Aquí debes colocar la URL del frontend de la tienda, por ejemplo, `http://localhost:5173` en desarrollo o la URL del sitio en producción.
+
+9. **Credenciales de Mercado Pago:**
+   - **`MP_ACCESS_TOKEN =`**  
+     Token de acceso para la API de Mercado Pago en producción.
+   - **Pruebas:**
+     Si estás en modo de prueba puedes usar el token de prueba:  
+     `MP_ACCESS_TOKEN =`
+
+#### Configuración del archivo `.env` en la carpeta `front`
+
+1. **`VITE_URL = http://localhost:8069`**  
+   La URL que se usará para hacer peticiones desde el frontend al backend. Por defecto es el servidor local, pero en producción debe ser la URL del servidor.
+
+2. **`VITE_URL_SERVER_DASHBOARD =`**  
+   La URL para mostrar las imágenes del servidor en el dashboard. Ejemplo: `http://localhost:8069/uploads`.
+
+### Procedimiento de Instalación de Dependencias
+
+El procedimiento es el mismo tanto para la **tienda** como para el **dashboard**:
+
+1. **Instalar dependencias del frontend:**
+
+   - Desde la consola, entra en la carpeta `front` y ejecuta:
+     ```bash
+     npm i react-scripts
+     ```
+
+2. **Compilar el frontend:**
+
+   - Luego ejecuta:
+     ```bash
+     npm run build
+     ```
+   - Esto generará una carpeta `dist` dentro de la carpeta `front`.
+
+3. **Mover la carpeta `dist`:**
+
+   - Copia la carpeta `dist` al directorio `back`. Si ya existe una, reemplázala.
+
+4. **Instalar las dependencias del backend:**
+
+   - Desde la consola, navega a la carpeta `back` y ejecuta:
+     ```bash
+     npm i
+     ```
+
+5. **Iniciar el servidor:**
+   - Finalmente, inicia el servidor con:
+     ```bash
+     npm start
+     ```
+   - El servidor backend y el frontend estarán corriendo, y la tienda estará lista para funcionar.

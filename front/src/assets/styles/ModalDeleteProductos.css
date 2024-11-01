@@ -1,0 +1,65 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.521);
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1 !important;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.background.active {
+  display: block;
+  z-index: 1000 !important;
+  opacity: 1;
+}
+.background.clear-info-web.active {
+  z-index: 9999 !important;
+}
+.ModalDeletePoductos.clear-info-web.active {
+  z-index: 9999 !important;
+}
+.ModalDeletePoductos {
+  background-color: white;
+  position: fixed;
+  top: 25vh;
+  display: flex;
+  min-width: 350px;
+  max-width: 95%;
+  min-height: 15rem;
+  max-height: 80vh;
+  border-radius: 12px;
+  left: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  box-shadow: 0 0 5px 2px black;
+  color: rgb(0, 0, 0);
+  z-index: 1000 !important;
+  transform: translateX(-1050%);
+  transition: all 1s ease-in-out;
+}
+.ModalDeletePoductos.active {
+  transform: translateX(-50%);
+}
+.ModalDeletePoductos h1 {
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: bold;
+}
+.btns-modal-delete {
+  margin: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+@media (max-width: 800px) {
+  .ModalDeletePoductos {
+    min-width: 95%;
+    width: 95%;
+  }
+}

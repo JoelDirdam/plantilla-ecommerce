@@ -1,0 +1,67 @@
+.datos-Cuenta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 1rem 0;
+}
+.producto-pedido {
+  display: flex;
+  align-items: center;
+}
+.img-pedidos {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+.producto-pedido {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+  white-space: nowrap; /* Evita que el texto se rompa */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Añade "..." si el texto es demasiado largo */
+}
+.filtros-pedidos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12rem);
+  /* place-content: center; */
+  place-items: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .producto-pedido {
+    white-space: normal; /* Permite que el texto se ajuste en varias líneas en pantallas pequeñas */
+  }
+  .filtros-pedidos {
+    place-content: center;
+  }
+}
+.pedidos-list {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.pedidos-list.delete {
+  top: 4rem;
+}
+.container-productos.pedido {
+  text-align: left;
+}
+.css-193q0wg-MuiListItem-root p {
+  color: black !important;
+}
+.form-envio {
+  margin: 1rem 0 !important;
+  width: 15rem;
+}
+@media (max-width: 500px) {
+  .form-envio {
+    width: 100%;
+  }
+}

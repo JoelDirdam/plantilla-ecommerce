@@ -1,0 +1,76 @@
+.Lista-usuarios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+.Lista-usuarios table tr {
+  text-align: left;
+}
+.Lista-usuarios table td,
+.Lista-usuarios table th {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #ddd;
+}
+.Lista-usuarios table th {
+  background-color: #bbbbbb; /* Color de fondo para el encabezado */
+}
+
+.Lista-usuarios table tr:hover {
+  background-color: #bdbaba; /* Color de fondo al pasar el ratón */
+}
+.fa-up-right-from-square {
+  cursor: pointer;
+}
+.active-text {
+  display: none;
+}
+@media (max-width: 800px) {
+  .Lista-usuarios {
+    display: block; /* Cambia el contenedor a bloque para una disposición vertical */
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .active-text {
+    display: block;
+    padding-right: 5px;
+  }
+  .Lista-usuarios table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .Lista-usuarios table thead {
+    display: none;
+  }
+
+  .Lista-usuarios table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .Lista-usuarios table td {
+    display: flex;
+    padding: 0.5rem;
+    border-bottom: none;
+  }
+
+  .Lista-usuarios table td::before {
+    content: attr(
+      data-label
+    ); /* Usa el atributo 'data-label' para mostrar el nombre del campo */
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+}
+.buscardor-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}

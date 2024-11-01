@@ -1,0 +1,81 @@
+.buscador {
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+.buscador input {
+  padding: 10px;
+  border-radius: 4px;
+  flex: 1;
+  outline: none;
+  border: none;
+}
+
+.icono-buscador {
+  margin-left: 10px;
+  color: #333;
+}
+.filtros-adicionales {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
+}
+
+.filtros-adicionales select {
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: #959494;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  border-radius: 3px;
+  padding: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.filtros-adicionales option {
+  cursor: pointer;
+}
+.filtros-adicionales p {
+  font-size: 1.1rem;
+  color: #959494;
+  font-weight: 500;
+}
+.filtros-adicionales select {
+  padding: 1rem;
+}
+/* filtros */
+.container-filtros-productos {
+  display: flex;
+  gap: 1rem;
+}
+.container-filtros-productos > div:first-child {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+/* .filtros-categorias {
+  display: flex;
+  flex-direction: column;
+} */
+.filtros-categorias > div {
+  display: grid;
+  /* grid-template-columns: repeat(2, 2fr); */
+}
+.css-j204z7-MuiFormControlLabel-root {
+  margin: 0 !important;
+}
+
+.MuiBox-root.css-qxh7fn {
+  width: 100% !important;
+}
+.css-188mx6n-MuiSlider-root {
+  width: 90% !important;
+}
+.MuiSlider-root.MuiSlider-colorPrimary.MuiSlider-sizeMedium.css-188mx6n-MuiSlider-root {
+  color: black !important;
+}

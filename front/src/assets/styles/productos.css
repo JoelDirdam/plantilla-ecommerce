@@ -1,0 +1,185 @@
+.container-productos {
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+}
+
+.container-productos h1 {
+  text-transform: uppercase;
+  margin: 1.5rem auto;
+}
+.css-1yuhvjn {
+  margin: 0 !important;
+}
+.productos-lista {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.productos-lista > p {
+  margin: 2rem;
+  font-weight: bold;
+}
+.productos-item {
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+  text-align: left;
+}
+.productos-item h2 {
+  margin: 5px 0;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.productos-item p {
+  font-weight: bold;
+}
+.productos-item s {
+  color: gray;
+}
+.no-productos {
+  color: black;
+}
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem 0;
+}
+.image-container-off,
+.image-container-sale {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 0.6rem;
+  width: 3rem; /* Asegurarse de que el ancho y alto sean iguales */
+  height: 3rem; /* Igualar el alto con el ancho */
+  padding: 0.5rem; /* Reducir padding para que el texto no se distorsione */
+  border-radius: 50%; /* Hacer que sea un círculo perfecto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.image-container-off {
+  left: 3%;
+  background-color: black;
+}
+.productos-item img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+}
+@media (max-width: 446px) {
+  .productos-item {
+    font-size: 1.2rem;
+  }
+}
+
+.filtros-color-tallas {
+  display: grid;
+
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 5px 10px !important;
+}
+.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-1edfpdg-MuiTypography-root {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif !important;
+}
+.productos-lista-noproducts {
+  text-align: center;
+  margin: 2rem auto;
+  font-weight: bold;
+  width: 80%;
+  font-size: 1.2rem;
+}
+.container-filtros-productos {
+  font-family: "Montserrat", sans-serif !important;
+}
+@media (max-width: 1000px) {
+  .container-filtros-productos {
+    flex-direction: column;
+  }
+  .container-filtros-productos > div:first-child {
+    order: 2;
+    width: 100% !important;
+  }
+  .filtros-categorias > div {
+    display: grid;
+    margin: 1rem 0;
+    /* grid-template-columns: repeat(auto-fill, 200px); */
+  }
+  .buscador {
+    width: 15rem !important;
+  }
+}
+@media (max-width: 850px) {
+  .buscador {
+    width: 100% !important;
+    margin: 1rem auto;
+  }
+  .buscador input {
+    padding: 1rem 0.5rem !important;
+  }
+  .filtros-container {
+    flex-direction: column;
+  }
+  .productos-item {
+    margin: 1rem 0;
+  }
+  .productos-item p {
+    font-size: 0.8rem;
+  }
+  .productos-lista {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .productos-item p {
+    font-size: 1rem;
+  }
+  .image-container-sale,
+  .image-container-off {
+    font-size: 0.8rem;
+  }
+}
+.filtros-categorias h3 {
+  margin: 1rem 0;
+}
+@media (max-width: 500px) {
+  .filtros-adicionales {
+    flex-direction: column;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+}
+.filtro-precios p {
+  font-weight: bold;
+  color: gray;
+}
+.MuiBox-root.css-1yuhvjn {
+  margin: 0rem !important;
+  margin-bottom: 1.5rem !important;
+}
